@@ -46,7 +46,8 @@
                                     <a href="/edit/<?= $employee['employee_id'] ?>" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">
                                         Edit
                                     </a>
-                                    <form action="/delete/<?= $employee['employee_id'] ?>" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?')">
+                                    <form action="./controllers/handlers/DeleteEmployee.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?')">
+                                    <input type="hidden" name="employee_id" value="<?= $employee['employee_id'] ?>">
                                         <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">
                                             Delete
                                         </button>

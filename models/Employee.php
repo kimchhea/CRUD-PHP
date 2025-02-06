@@ -35,6 +35,22 @@ public function StoreEmployees($query,$data){
         echo "Error: ". $e->getMessage();
     }
 }
+public function DeleteEmployees($employee_id){
+    try {
+        $query = "DELETE FROM employee WHERE employee_id = :employee_id";
+        $stmt = $this->conn->prepare($query);
+
+        // Bind the parameter
+        $stmt->bindParam(':employee_id', $employee_id, PDO::PARAM_INT);
+        $result = $stmt->execute();
+        return $result; 
+
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return false; // Return false in case of an error
+    }
+}
+
  }
 
 ?>
