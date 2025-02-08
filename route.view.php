@@ -3,6 +3,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 $router = [
     '/' => './controllers/pages/HomeController.php',
     '/create' => './controllers/pages/CreateController.php',
+    '/Edit' => '/controllers/handlers/EditEmployeeController.php',
     '/404' => 'Not Found',
     '/store/employees' => './controllers/handlers/StoreEmployeeController.php'
 ];

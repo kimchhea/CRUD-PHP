@@ -6,7 +6,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $employee = new Employee($conn);
    $result = $employee->DeleteEmployees($employee_id);
     if ($result) {
-        echo "Employee successfully deleted!";
+        header('location: '.'/');
+       
     } else {
         echo "Failed to delete employee.";
     }

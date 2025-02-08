@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-    <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg p-6">
+    <div class="w-full max-w-7xl bg-white shadow-lg rounded-lg p-6">
         <!-- Header Section -->
         <div class="flex justify-between items-center border-b pb-4 mb-4">
             <h2 class="text-2xl font-semibold text-gray-800">Employee Management</h2>
@@ -29,6 +29,7 @@
                         <th class="px-6 py-3 text-left border">Display Name</th>
                         <th class="px-6 py-3 text-center border">Email</th>
                         <th class="px-6 py-3 text-center border">Password</th>
+                        <th class="px-6 py-3 text-center border">phone number</th>
                         <th class="px-6 py-3 text-center border">Actions</th>
                     </tr>
                 </thead>
@@ -41,6 +42,7 @@
                             <td class="px-6 py-4 text-gray-600 border"><?= htmlspecialchars($employee['display_name']) ?></td>
                             <td class="px-6 py-4 text-gray-600 border text-center"><?= htmlspecialchars($employee['email']) ?></td>
                             <td class="px-6 py-4 text-gray-600 border text-center"><?= htmlspecialchars($employee['password']) ?></td>
+                            <td class="px-6 py-4 text-gray-600 border text-center"><?= htmlspecialchars($employee['phone_number']) ?></td>
                             <td class="px-6 py-4 text-center border">
                                 <div class="flex justify-center space-x-2">
                                     <a href="/edit/<?= $employee['employee_id'] ?>" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">

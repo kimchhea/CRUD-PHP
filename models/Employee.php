@@ -6,10 +6,13 @@
     private $last_name;
     private $email;
     private $passwords;
+    private $phone_number;
     private $role_id;
+// constructor  that used for initialization the connection of data base
 public function __construct($db){
     $this->conn = $db;
 }
+// function that used for get all the employees  from the database
 public function GetAllEmployees($query){
 try{
     $data = $this->conn->prepare($query);
@@ -20,10 +23,11 @@ catch(Exception $e){
      echo $e->getMessage();
 }
 }
+//function that used for store the data of employees
 public function StoreEmployees($query,$data){
     try{
-        $smtm = $this->conn->prepare($query);
-       $result = $smtm->execute($data);
+       $stmt = $this->conn->prepare($query);
+       $result = $stmt->execute($data);
        if ($result) {
         return true; // Successful insertion
     } else {
@@ -35,6 +39,7 @@ public function StoreEmployees($query,$data){
         echo "Error: ". $e->getMessage();
     }
 }
+//function that used for delete the data of employees
 public function DeleteEmployees($employee_id){
     try {
         $query = "DELETE FROM employee WHERE employee_id = :employee_id";
@@ -50,6 +55,7 @@ public function DeleteEmployees($employee_id){
         return false; // Return false in case of an error
     }
 }
+//function that used for update the data of employees
 
  }
 
