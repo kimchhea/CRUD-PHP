@@ -56,7 +56,9 @@ public function DeleteEmployees($employee_id){
     }
 }
 //function that used for update the data of employees
+public function EditEmployye($employee_id){
 
+}
  }
 
 ?>
