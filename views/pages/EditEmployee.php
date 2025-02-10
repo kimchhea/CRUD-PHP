@@ -1,3 +1,5 @@
+
+<?= $uriPart[1] ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +13,15 @@
         <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-8">
             <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Edit Profile</h2>
             
-            <form class="space-y-8" method="POST" action='/Edit/Submit'>
+            <form class="space-y-8" method="POST" action='/Updata/employee'>
                 <!-- ID Field (non-editable) -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">ID</label>
                     <input type="text" 
-                           value="12345" 
-                           readonly
+                           value="<?= $uriPart[1] ?>" 
+                           readonly.
+                           name='employee_id'
+                           id="employee_id"
                            class="mt-1 block w-full rounded-lg bg-gray-200 text-gray-500 border-gray-300 shadow-sm focus:ring-0 cursor-not-allowed py-2 px-4">
                 </div>
 
@@ -31,7 +35,6 @@
                                required
                                id="first_name"
                                name="first_name"
-
                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                     </div>
                     
@@ -54,7 +57,7 @@
                     </label>
                     <input type="text" 
                     id="display_name"
-                    name="diplay_name"
+                    name="display_name"
                            required
                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                 </div>

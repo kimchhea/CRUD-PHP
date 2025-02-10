@@ -22,7 +22,6 @@ $hashpasswords = password_hash($data['password'],PASSWORD_ARGON2I);
     if ($result) {
         // echo "Employee successfully added!";
         header('location: '.'/');
-
     }
     else {
         echo "Failed to store employee.";

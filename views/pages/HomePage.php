@@ -45,10 +45,14 @@
                             <td class="px-6 py-4 text-gray-600 border text-center"><?= htmlspecialchars($employee['phone_number']) ?></td>
                             <td class="px-6 py-4 text-center border">
                                 <div class="flex justify-center space-x-2">
-                                    <a href="/Edit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">
+                                    <form action="/Edit/<?= $employee['employee_id'] ?>" method="POST">
+                                    <input type="hidden" name="employee_id" value="<?= $employee['employee_id'] ?>">
+                                    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">
                                         Edit
-                                    </a>
-                                    <form action="/Edit/employee" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?')">
+                                    </button>
+                                    </form>
+                                  
+                                    <form action="/Delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?')">
                                     <input type="hidden" name="employee_id" value="<?= $employee['employee_id'] ?>">
                                         <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm shadow transition duration-300">
                                             Delete
