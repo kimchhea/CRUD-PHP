@@ -85,9 +85,20 @@ public function updateEmployee($id, $firstname, $lastname, $displayname, $passwo
         return false;
     }
 }
+public function GetonID($query , $id){
+    try{
+        $data = $this->conn->prepare( $query );
+        $data->bindParam(1, $id, PDO::PARAM_INT); 
+        $data->execute();
+        return $data->fetch(PDO::FETCH_ASSOC);
+    }
+    catch(Exception $e){
+         echo $e->getMessage();
+         return false; 
+    }
 
 
 }
 
-
+ }
 ?>

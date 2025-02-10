@@ -1,5 +1,8 @@
 
-<?= $uriPart[1] ?>
+<?php
+// print_r ($result);
+// echo ($result['first_name']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +38,7 @@
                                required
                                id="first_name"
                                name="first_name"
+                               value="<?=  ($result['first_name'])?>"
                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                     </div>
                     
@@ -45,6 +49,8 @@
                         <input type="text" 
                         id="last_name"
                         name="last_name"
+                        value="<?=  ($result['last_name'])?>"
+
                                required
                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                     </div>
@@ -58,6 +64,7 @@
                     <input type="text" 
                     id="display_name"
                     name="display_name"
+                    value="<?=  ($result['display_name'])?>"
                            required
                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                 </div>
@@ -69,6 +76,8 @@
                     </label>
                     <input type="email" 
                            required
+                           value="<?=  ($result['email'])?>"
+
                            id="email"
                            name="email"
                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
@@ -82,6 +91,7 @@
                     <input type="password" 
                            required
                            name="password"
+                           value="<?=  ($result['password'])?>"
                            id="password"
                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                 </div>
@@ -93,6 +103,8 @@
                     </label>
                     <input type="tel" 
                     name="phone_number"
+                    value="<?=  ($result['phone_number'])?>"
+
                     id="phone_number"
                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 py-2 px-4">
                 </div>
