@@ -81,7 +81,6 @@ public function updateEmployee($id, $firstname, $lastname, $displayname, $passwo
     if ($stmt->execute()) {
         return true; // Update successful
     } else {
-        echo "Error updating: " . implode(" - ", $stmt->errorInfo()); // Print error message
         return false;
     }
 }
